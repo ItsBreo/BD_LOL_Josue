@@ -4,9 +4,9 @@ use bd_league_of_legends;
 
 create table tipo_runa (
 id_tipo_runa int not null,
-nombre varchar (40),
+nombre varchar (500),
 estadisticas varchar (500),
-definicion varchar (700),
+definicion varchar (500),
 uso varchar (500),
 primary key (id_tipo_runa)
 );
@@ -19,9 +19,9 @@ insert into tipo_runa value(5,'Mejora glacial','Ralentización de enemigos','Al 
 
 create table runas (
 id_runa int not null,
-nombre varchar (20),
+nombre varchar (500),
 descripcion varchar (500),
-uso varchar (100),
+uso varchar (500),
 popularidad boolean,
 id_campeon int not null,
 primary key (id_runa)
@@ -48,10 +48,10 @@ insert into runas_tipo_runa value(5,5);
 
 create table equipos (
 id_equipo int not null,
-nombre varchar(30),
-posicion varchar(15),
+nombre varchar(500),
+posicion varchar(500),
 antiguedad date,
-num_jugadores varchar(6),
+num_jugadores varchar(500),
 id_jugador int not null,
 primary key (id_equipo)
 );
@@ -64,10 +64,10 @@ insert into equipos value(5,'RNG','Cuarto','2015-02-15',10,5);
 
 create table torneos (
 id_torneo int not null,
-premio varchar (40),
-nombre varchar(30),
-localizacion varchar (50),
-epoca varchar(40),
+premio varchar (500),
+nombre varchar(500),
+localizacion varchar (500),
+epoca varchar(500),
 id_equipo int not null,
 primary key (id_torneo)
 );
@@ -81,10 +81,10 @@ insert into torneos value(5,'700.000€','MSI','Busan','Primavera',5);
 
 create table partidas (
 id_partida int not null,
-duracion varchar (5),
-kills varchar (100),
-asistencias varchar(30),
-objetivos_asesinados varchar (10),
+duracion varchar (500),
+kills varchar (500),
+asistencias varchar(500),
+objetivos_asesinados varchar (500),
 primary key (id_partida)
 );
 
@@ -97,10 +97,10 @@ insert into partidas value(5,'35:00','25','50','5');
 
 create table jugadores (
 id_jugador int not null,
-nombre_real varchar (300),
-nivel varchar (400),
-alias varchar (300),
-edad varchar (200),
+nombre_real varchar (500),
+nivel varchar (500),
+alias varchar (500),
+edad varchar (500),
 id_campeon int not null,
 primary key (id_jugador)
 );
@@ -127,10 +127,10 @@ insert into partida_jugador value(5,5);
 
 create table objetos (
 id_objeto int not null,
-nombre varchar(700),
-definicion varchar (300),
-provinencia varchar (400),
-precio varchar(40),
+nombre varchar(500),
+definicion varchar (500),
+provinencia varchar (500),
+precio varchar(500),
 primary key (id_objeto)
 );
 
@@ -155,11 +155,11 @@ insert into objeto_jugador value(5,5);
 
 create table estadisticas (
 id_estadistica int not null,
-kda varchar(34),
-asesinatos varchar(100),
-asistencias varchar(100),
-muertes varchar (100),
-elo varchar(100),
+kda varchar(500),
+asesinatos varchar(500),
+asistencias varchar(500),
+muertes varchar (500),
+elo varchar(500),
 primary key (id_estadistica)
 );
 
@@ -183,10 +183,10 @@ insert into jugador_estadistica value(5,5);
 
 create table aspectos (
 id_aspecto int not null ,
-nombre varchar (40),
-tematica varchar (40),
-precio varchar (40),
-rareza varchar (15),
+nombre varchar (500),
+tematica varchar (500),
+precio varchar (500),
+rareza varchar (500),
 exclusividad boolean,
 primary key (id_aspecto)
 );
@@ -199,10 +199,10 @@ insert into aspectos value(5,'Irelia Hoja Divina','Hoja divina','1350','Épico',
 
 create table habilidades (
 id_habilidad int not null ,
-Nombre varchar(30),
-enfriamento varchar (100),
-descripcion varchar (700),
-uso varchar (100),
+Nombre varchar(500),
+enfriamento varchar (500),
+descripcion varchar (500),
+uso varchar (500),
 id_campeon int not null,
 primary key (id_habilidad)
 );
@@ -215,10 +215,10 @@ insert into habilidades value(5,'Danza de las cuchillas','12 segundos si no ejec
 
 create table campeones (
 id_campeon int not null ,
-Nombre varchar (20),
-Historia varchar (900),
-Rol varchar (15),
-Dificultad varchar (1),
+Nombre varchar (500),
+Historia varchar (500),
+Rol varchar (500),
+Dificultad varchar (500),
 id_aspecto int not null ,
 id_objeto int not null ,
 id_habilidad int not null ,
